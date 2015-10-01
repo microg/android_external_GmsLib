@@ -13,15 +13,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 dependencies {
     compile project(':play-services-base')
-    compile project(':play-services-location')
-    compile project(':play-services-wearable')
-    compile project(':play-services-cast')
 }
 
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_6
+        sourceCompatibility JavaVersion.VERSION_1_7
     }
 }
