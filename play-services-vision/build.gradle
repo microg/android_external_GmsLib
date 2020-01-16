@@ -47,9 +47,5 @@ android {
 
 dependencies {
     api project(':play-services-base')
-    api project(':play-services-cast')
-    api project(':play-services-gcm')
-    api project(':play-services-location')
-    api project(':play-services-wearable')
-    api project(':play-services-vision')
+    api project(':play-services-vision-api')
 }
