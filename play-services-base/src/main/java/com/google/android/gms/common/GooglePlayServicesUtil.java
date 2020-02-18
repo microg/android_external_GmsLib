@@ -137,11 +137,9 @@ public class GooglePlayServicesUtil {
      */
     public static Context getRemoteContext(Context context) {
         try {
-            Log.d("barcode-tester", "Trying to create remote context");
-            // This should be Constants.GMS_PACKAGE_NAME
-            return context.createPackageContext("com.google.android.gms", Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
+            return context.createPackageContext(Constants.GMS_PACKAGE_NAME, Context.CONTEXT_INCLUDE_CODE | Context.CONTEXT_IGNORE_SECURITY);
         } catch (PackageManager.NameNotFoundException ex) {
-            Log.d("barcode-tester", "No context able to be created: " + ex);
+            Log.e(TAG, "No context able to be created: " + ex);
             return null;
         }
     }
